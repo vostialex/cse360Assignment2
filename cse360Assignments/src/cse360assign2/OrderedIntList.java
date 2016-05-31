@@ -23,7 +23,7 @@ public class OrderedIntList
 	/**
 	 * This variable is used to assist in debugging code if set to true;
 	 */
-	private boolean debug = false;
+	private boolean debug = true;
 	
 	/**
 	 * This constructor creates an integer array 
@@ -40,8 +40,15 @@ public class OrderedIntList
 	 */
 	public void insert (int num) 
 	{
+		if (debug)
+		{
+			System.out.println ("debug – starting insert");
+			System.out.println ("debug – num = " + num);
+		}
+		
 		if(count == numArray.length)
 			grow();
+		
 		if(count == 0)
 		{
 			numArray[0] = num;
@@ -55,7 +62,11 @@ public class OrderedIntList
 			
 			while (!done && index < count)
 				if(num < numArray[index])
+				{
 					done = true;
+					if (debug)
+						System.out.println("debug while loop– num = " + num + " < "+ numArray[index]  );
+				}
 			
 				else
 				{
@@ -67,6 +78,12 @@ public class OrderedIntList
 				numArray[index] = numArray[index-1];
 			
 			numArray[jIndex] = num; 
+			if (debug)
+			{
+				System.out.println("debug ending insert");
+				System.out.println("debug - "+ num +" is inserted in index "+ jIndex);
+			}
+				
 			count = count + 1;
 		}
 	}
@@ -76,10 +93,22 @@ public class OrderedIntList
 	 */
 	private void grow()
 	{
+		if (debug)
+		{
+			System.out.println ("debug – starting grow");
+		}
+		
 		int []tempNumArray = new int[count * 2];
+		if (debug)
+			System.out.println ("debug – count * 2 = " + count * 2);
 		
 		for (int index = 0; index < count; index++ )
+		{
 			tempNumArray[index] = numArray[index];
+		
+			if (debug)
+				System.out.println ("debug – tempNumArray index = " + index + " = " + tempNumArray[index]);
+		}	
 		
 		numArray = tempNumArray;
 	}
