@@ -58,8 +58,7 @@ public class Analytics extends OrderedIntList
 	}
 	
 	/**
-	 *Calculates median of the order list
-	 *If the list has even numbers of integers, the larger of the two middle numbers is used.
+	 *Calculates median of the ordered list
 	 *
 	 * @return returns the median of the ordered list as an integer, returns -1 if list is empty.
 	 */
