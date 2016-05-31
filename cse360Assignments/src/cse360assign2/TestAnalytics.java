@@ -26,6 +26,7 @@ public class TestAnalytics {
 		System.out.print ("\n Number of integers in the list = " + list.numInt());
 		System.out.println();
 		
+		
 		/**
 		 * Inserting integers into the list
 		 */
