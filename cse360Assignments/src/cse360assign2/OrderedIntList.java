@@ -23,7 +23,7 @@ public class OrderedIntList
 	/**
 	 * This variable is used to assist in debugging code if set to true;
 	 */
-	private boolean debug = true;
+	private boolean debug = false;
 	
 	/**
 	 * This constructor creates an integer array 

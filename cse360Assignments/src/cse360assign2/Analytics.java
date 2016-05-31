@@ -99,6 +99,7 @@ public class Analytics extends OrderedIntList
 	}
 	
 	/**
+	 * This method is used to get the highest value in the list.
 	 * 
 	 * @return the highest value from the ordered list, returns -1 if list is empty.
 	 */
@@ -115,6 +116,7 @@ public class Analytics extends OrderedIntList
 	}
 	
 	/**
+	 * This method used to get the lowest value in the list
 	 * 
 	 * @return the lowest number in the ordered list, returns -1 if list is empty.
 	 */
@@ -131,6 +133,7 @@ public class Analytics extends OrderedIntList
 	}
 	
 	/**
+	 * This method is used to get the number of integers in the list.
 	 * 
 	 * @return the number of integers in the ordered list.
 	 */
